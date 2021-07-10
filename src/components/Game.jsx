@@ -93,7 +93,7 @@ const Game = () => {
                   setTimeout(() => {
                     setUserChoice(null);
                     setComputerChoice(null);
-                  }, 8000);
+                  }, 1500);
                   generateComputerChoice();
                 }}
               ></i>
@@ -111,7 +111,7 @@ const Game = () => {
                   setTimeout(() => {
                     setUserChoice(null);
                     setComputerChoice(null);
-                  }, 8000);
+                  }, 1500);
                   generateComputerChoice();
                 }}
               ></i>
