@@ -74,7 +74,7 @@ const Game = () => {
                   setTimeout(() => {
                     setUserChoice(null);
                     setComputerChoice(null);
-                  }, 8000);
+                  }, 1000);
                   generateComputerChoice();
                 }}
               ></i>
