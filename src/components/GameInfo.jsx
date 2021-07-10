@@ -18,24 +18,30 @@ import { motion, AnimatePresence } from "framer-motion";
 //   },
 // };
 
+// const gameReset = () => {
+//   setUserChoice(null);
+//   setComputerChoice(null);
+//   setResult(null);
+//   setUserScore(0);
+// };
+
 const GameInfo = ({
   userScore,
   setUserScore,
   userChoice,
+  setUserChoice,
   computerChoice,
+  setComputerChoice,
   result,
+  setResult,
 }) => {
-  //   const getUserChoice = () => {
-  //     if (userChoice === "rock") {
-  //       return "Rock";
-  //     } else if (userChoice === "paper") {
-  //       return "Paper";
-  //     } else if (userChoice === "scissors") {
-  //       return "Scissors";
-  //     } else {
-  //       return;
-  //     }
-  //   };
+  const gameReset = () => {
+    setUserChoice(null);
+    setComputerChoice(null);
+    setResult(null);
+    setUserScore(0);
+  };
+  
   return (
     <GameInfoContainer>
       <div className="choices-container">
@@ -61,7 +67,7 @@ const GameInfo = ({
       </div>
       <div className="score-container">
         <h3>Your Score: {userScore}</h3>
-        <button onClick={() => setUserScore(0)}>Reset</button>
+        <button onClick={() => gameReset()}>Reset</button>
       </div>
     </GameInfoContainer>
   );

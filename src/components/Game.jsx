@@ -44,8 +44,11 @@ const Game = () => {
         userScore={userScore}
         setUserScore={setUserScore}
         userChoice={userChoice}
+        setUserChoice={setUserChoice}
         computerChoice={computerChoice}
+        setComputerChoice={setComputerChoice}
         result={result}
+        setResult={setResult}
       />
       <GameContainer>
         <h1>Rock, Paper, Scissors</h1>
@@ -58,9 +61,20 @@ const Game = () => {
                   userChoice === "Rock"
                     ? "fas fa-hand-rock active"
                     : "fas fa-hand-rock"
+
+                  //   setTimeout(
+                  //     userChoice === "Rock"
+                  //       ? "fas fa-hand-rock active"
+                  //       : "fas fa-hand-rock",
+                  //     1000
+                  //   )
                 }
                 onClick={() => {
                   setUserChoice("Rock");
+                  setTimeout(() => {
+                    setUserChoice(null);
+                    setComputerChoice(null);
+                  }, 8000);
                   generateComputerChoice();
                 }}
               ></i>
@@ -74,7 +88,14 @@ const Game = () => {
                     ? "fas fa-hand-paper active"
                     : "fas fa-hand-paper"
                 }
-                onClick={() => setUserChoice("Paper")}
+                onClick={() => {
+                  setUserChoice("Paper");
+                  setTimeout(() => {
+                    setUserChoice(null);
+                    setComputerChoice(null);
+                  }, 8000);
+                  generateComputerChoice();
+                }}
               ></i>
             </h2>
 
@@ -85,7 +106,14 @@ const Game = () => {
                     ? "fas fa-hand-scissors active"
                     : "fas fa-hand-scissors"
                 }
-                onClick={() => setUserChoice("Scissors")}
+                onClick={() => {
+                  setUserChoice("Scissors");
+                  setTimeout(() => {
+                    setUserChoice(null);
+                    setComputerChoice(null);
+                  }, 8000);
+                  generateComputerChoice();
+                }}
               ></i>
             </h2>
           </div>
